@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Getting_Directions___Show_Route_On_Map_Using_MapKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Address Here..........!" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nqj-NK-dvy">
+                                <rect key="frame" x="0.0" y="63" width="313" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="D2W-2u-goJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PIh-ou-65U">
+                                <rect key="frame" x="305" y="63" width="109" height="40"/>
+                                <color key="backgroundColor" red="0.55634254220000001" green="0.97934550050000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="s7H-yK-BAs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <state key="normal" title="Get Direction">
+                                    <color key="titleColor" red="0.93960179379999997" green="0.016235516429999999" blue="0.031424154349999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onGetDirectionBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s5l-7Y-T09"/>
+                                </connections>
+                            </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="HwK-t0-3gg">
+                                <rect key="frame" x="0.0" y="111" width="414" height="785"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="HwK-t0-3gg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="AZG-Zy-Yvf"/>
+                            <constraint firstItem="HwK-t0-3gg" firstAttribute="top" secondItem="nqj-NK-dvy" secondAttribute="bottom" constant="8" id="Kzh-YR-qeF"/>
+                            <constraint firstItem="nqj-NK-dvy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PQq-F9-XLy"/>
+                            <constraint firstItem="nqj-NK-dvy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="19" id="Tym-O2-FvQ"/>
+                            <constraint firstAttribute="bottom" secondItem="HwK-t0-3gg" secondAttribute="bottom" id="UWU-qL-IuZ"/>
+                            <constraint firstItem="PIh-ou-65U" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="19" id="buy-qP-UDL"/>
+                            <constraint firstItem="PIh-ou-65U" firstAttribute="leading" secondItem="nqj-NK-dvy" secondAttribute="trailing" constant="-8" id="iII-dF-EKm"/>
+                            <constraint firstItem="HwK-t0-3gg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="mZH-wD-uQk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PIh-ou-65U" secondAttribute="trailing" id="uEi-M2-ZEk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="getDirection" destination="PIh-ou-65U" id="CzD-ep-2Kv"/>
+                        <outlet property="map" destination="HwK-t0-3gg" id="2V5-hK-6jg"/>
+                        <outlet property="textFieldForAddress" destination="nqj-NK-dvy" id="NzH-ZJ-C50"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-20.289855072463769" y="48.883928571428569"/>
+        </scene>
+    </scenes>
+</document>
